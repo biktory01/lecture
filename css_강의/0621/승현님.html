@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>button</title>
+        <style>
+            /* 버튼 기본 스타일 */
+            button {
+                width: 90px;
+                height: 40px;
+                border: 1px solid #1a202c;
+                border-radius: none;
+                box-shadow: 2px 2px 0px 0px #ffffff1a inset;
+                background-color: #343f50;
+            }
+            .normal {
+                background-color: #343f50;
+                color: #cbd5df;
+            }
+            .positive {
+                color: #439aff;
+            }
+            .negative {
+                color: #eb5757;
+            }
+            /* 버튼 가상클래스 선택자 */
+            .normal.dis:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+            .positive:hover {
+                background-color: #439aff;
+                color: #fff;
+                text-decoration: underline;
+                border: 1px solid #439aff;
+            }
+            .negative:hover {
+                background-color: #eb5757;
+                color: #fff;
+                border: 1px solid #eb5757;
+                text-decoration: underline;
+            }
+            .normal.dis:active,
+            .positive:active,
+            .negative:active {
+                color: #fff;
+                text-decoration: underline;
+                box-shadow: 2px 2px 0px 0px #00000020 inset;
+            }
+            .normal:disabled {
+                color: #4a5568;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="normal dis">button</button>
+        <button class="normal" disabled>button</button>
+        <button class="positive">yes</button>
+        <button class="negative">del</button>
+    </body>
+</html>

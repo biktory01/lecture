@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 라디오 속성은 name을 중복시켜야 하지만, 체크박스 속성은 name을 다르게 지정해도 된다. -->
+    <!-- 라디오 속성은 서버가 어떤 값을 가지고 알고 있어야 하므로, value 값은 지정해주는게 좋습니다. -->
+    <form action="">
+        <fieldset>
+            <legend>브라우저</legend>
+            <!-- datalist, input과 속성값을 맞춰준 경우 label, input의 id값과 겹치지 않도록 주의해야 합니다. 똑같이 설정한 경우 search가 제대로 실행되지 않습니다.-->
+            <label for="browser">사용하는 브라우저를 선택하세요</label>
+            <!-- datalist의 id 속성을 input list 속성과 맞춰줘야 합니다. -->
+            <input list="browsers" id="browser">
+            <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Safari"></option>
+                <option value="Edge"></option>
+                <option value="IE"></option>
+                <!-- 예시 : input 창에 m 입력 시 m이 들어가는 모든 단어가 출력된다. -->
+                <option value="male"></option>
+                <option value="female"></option>
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>설명</legend>
+            <label for="male">남성</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="female">여성</label>
+            <input type="radio" name="gender" id="female" value="female">
+        </fieldset>
+
+        <fieldset>
+            <legend>사용 기술</legend>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="html" name="html">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="css" name="css">
+            <label for="js">JS</label>
+            <input type="checkbox" id="js" name="js">
+        </fieldset>
+    </form>
+</body>
+</html>

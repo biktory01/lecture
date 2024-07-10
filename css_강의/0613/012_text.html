@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 100px;
+            background-color: aquamarine;
+
+            word-break: break-all;
+            /* word-break: keep-all; */
+
+            /* 한줄일 때 글자가 길어지면 ...으로 나옴 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            /* 여러줄일 때 글자가 길어지면 ...으로 나옴 */
+            /* clamp로 줄 길이를 조절할 수 있음 */
+            overflow:hidden;  
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque earum inventore, obcaecati quas porro beatae minima, nemo dicta delectus assumenda illum maiores. Ea, nemo nihil possimus fuga hic iusto similique!
+    </p>
+</body>
+</html>

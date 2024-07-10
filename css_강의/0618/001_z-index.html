@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-color: aqua;
+        }
+        .parent > div {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* z-index의 값을 -로 바꾸게 되면 부모요소의 밑으로 이동하게 됨 */
+        .box1 {
+            position: relative;
+            background-color: royalblue;
+            z-index: 3;
+        }
+
+        .box2 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: slateblue;
+            z-index: -2;
+        }
+
+        .box3 {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background-color: salmon;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box1">a</div>
+        <div class="box2">b</div>
+        <div class="box3">c</div>
+    </div>
+</body>
+</html>

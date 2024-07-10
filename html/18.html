@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<style>
+    input {
+        display: block;
+    }
+</style>
+<body>
+    <input type="number" min="3" step="2">
+    <input type="text" maxlength="10">
+
+    <input type="hidden">
+    <!-- 작성 값을 초기화해주는 버튼을 만들어줌 -->
+    <input type="reset">
+    <!-- 입력 시 입력 내용을 삭제하는 x버튼이 생겨나는 검색창을 만들어줌 -->
+    <input type="search">
+
+    <input type="range">
+    <input type="color">
+    <label for="file">파일 선택하기</label>
+    <!-- 나중에 프로젝트할 때 꼭 사용되는 file 부분 나중에 꼭 챙겨보기 -->
+    <input type="file" id="file">
+
+    <input type="time" />
+    <!-- label이 필요없는 요소 : type="button"선언과 유효한 value 속성을 가진 input  요소에는 레이블이 필요하지 않습니다. -->
+    <input type="button" value="버튼입니다.">
+    <input type="email" />
+    <input type="tel" />
+    <input type="checkbox" />
+    <input type="radio" />
+    <input type="date" />
+    <input type="datetime-local" />
+    <input type="month" />
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* child 방식 > 자손의 "순번"으로 결정 */
+        div.box1 > h1:nth-child(1) {
+            color: royalblue;
+        }
+
+        /* 짝수 번의 h태그 들이 선택 */
+        div.box1 > :nth-child(even) {
+            color: brown;
+        }
+
+        /* 자손의 태그의 "유형"에 따라 결정 */
+        div.box1 > :nth-of-type(2n) {
+            color: green;
+        }
+
+        div.box2 em,
+        div.box2 span {
+            padding: 10px;
+            display: inline-block;
+            border: 1px solid #000;
+        }
+
+        body > :first-child {
+            background-color: #eee;
+        }
+
+        /* body태그의 직계 자손일 경우 last-child는 적용이 안됩니다. */
+        body > :last-child {
+            background-color: #eee;
+        }
+
+        /* 태그를 넣어주지 않았을 때에는 첫번째 오는 형제에서 7번째를 가리키는 것 */
+        div.box2 :nth-of-type(7) {
+            color: red;
+        }
+        div.box2 :only-of-type {
+            background-color: lime;
+        }
+        div.box2 :not(:first-child) {
+            font-weight: 700;
+        }
+        body > :not(:last-child) {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1>hello world</h1>
+        <h2>hello world</h2>
+        <h3>hello world</h3>
+        <h1>hello world</h1>
+        <h2>hello world</h2>
+        <h3>hello world</h3>
+        <h1>hello world</h1>
+        <h2>hello world</h2>
+        <h3>hello world</h3>
+    </div>
+    <div class="box2">
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+        <em>em</em>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </div>
+</body>
+</html>

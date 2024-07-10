@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 300px;
+            background-color: aquamarine;
+            /* text-align: left; */
+            /* text-align: right; */
+            /* text-align: center; */
+            /* 양쪽정렬: 중간중간 이상한 여백이 생겨 가독성이 좋지 못함 */
+            /* text-align: justify; */
+            /* text-align: start; */
+            text-align: end;
+        }
+
+        span {
+            font-size: 50px;
+            border: solid 1px #000;
+            line-height: 80px;
+        }
+
+        .baseline {
+            vertical-align: baseline;
+        }
+        .sub {
+            vertical-align: sub;
+        }
+        .super {
+            vertical-align: super;
+        }
+        .text-top {
+            vertical-align: text-top;
+        }
+        .text-bottom {
+            vertical-align: text-bottom;
+        }
+        .middle {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nemo voluptatibus dolorem molestias explicabo atque in at, id voluptate! Natus dolorem temporibus at in. Dolore ab unde dignissimos recusandae culpa?</p>
+
+    <span>부모요소
+        <span class="baseline">baseline</span>
+    </span>
+    <br>
+
+    <span>부모요소
+        <span class="sub">sub</span>
+    </span>
+    <br>
+
+    <span>부모요소
+        <span class="super">super</span>
+    </span>
+    <br>
+
+    <span>부모요소
+        <span class="text-top">text-top</span>
+    </span>
+    <br>
+
+    <span>부모요소
+        <span class="text-bottom">text-bottom</span>
+    </span>
+    <br>
+
+    <span>부모요소
+        <span class="middle">middle</span>
+    </span>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .lgBox {
+        width: 520px;
+        height: 712px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid #c4c4c4;
+        border-radius: 10px;
+      }
+      .lgBox h3 {
+        padding: 20px 0px 18px 0px;
+        text-align: center;
+        border-bottom: 1px solid #c4c4c4;
+      }
+      .lgBox .close {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 22px;
+        right: 24px;
+        cursor: pointer;
+      }
+      section {
+        padding: 26px 24px 25px 24px;
+      }
+      .tit {
+        margin-bottom: 24px;
+        color: #000;
+        font-family: 'spoqa Han Sans Neo';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+      input {
+        width: calc(100% - 32px);
+        padding: 15px;
+        display: block;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+      }
+      input:first-child {
+        margin-bottom: 5px;
+      }
+      .chkBox {
+        padding: 16px 0px 20px;
+        display: flex;
+        align-items: center;
+      }
+      .chkBox span {
+        margin-left: 8px;
+      }
+      .lgBtn {
+        width: 100%;
+        height: 50px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        background-color: #2F80ED;
+        border-radius: 5px;
+        border: 0;
+      }
+      .sign {
+        margin: 20px auto 30px;
+        text-align: center;
+      }
+      .sign a {
+        color: #767676;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .sign span {
+        margin: 0 12px;
+      }
+      .other {
+        margin-bottom: 20px;
+        color: #767676;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .other::before,
+      .other::after {
+        content: "";
+        width: 210px;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        background: #c4c4c4;
+      }
+      .other::before {
+        left: 0;
+      }
+      .other::after {
+        right: 0;
+      }
+      .btnWrap a {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid #767676;
+      }
+      .btnWrap a:last-child {
+        margin-bottom: 0px;
+      }
+      .btnWrap a>img {
+        position: absolute;
+        top: 24%;
+        left: 10px;
+      }
+      .btnWrap .facebook {
+        border-color: #2D9CDB;
+      }
+      .btnWrap .naver {
+        border-color: #00BF18;
+      }
+      .btnWrap .kakao {
+        border-color: #F2C94C;
+      }
+    </style>
+    <title>form 모달 실습</title>
+    </head>
+    <body>
+    <!-- 여기에 입력해주세요! -->
+    <h2 class="sr-only">로그인</h2>
+    <div class="lgBox">
+        <h3>로그인 또는 회원가입</h3>
+        <img class="close" src="../img/close.png" alt="닫기">
+        <section>
+            <p class="tit">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+            <form action="">
+                <input type="text" id="id" name="id" placeholder="아이디">
+                <input type="password" id="pw" name="pw" placeholder="비밀번호">
+            
+                <div class="chkBox">
+                    <img src="../img/check-box.png" alt="">
+                    <span>로그인 상태 유지</span>
+                </div>
+                <button type="submit" class="lgBtn">로그인</button>
+                <div class="sign">
+                    <a href="#">회원가입</a>
+                    <span>|</span>
+                    <a href="#">아이디/비밀번호 찾기</a>
+                </div>
+                <div class="other">또는</div>
+                <div class="btnWrap">
+                    <a type="submit">
+                        <img src="../img/Google__G__Logo 1.png" alt="">
+                        <div>구글 계정으로 로그인</div>
+                    </a>
+                    <a class="facebook" type="submit">
+                        <img src="../img/facebook.png" alt="">
+                        <div>페이스북 계정으로 로그인</div>
+                    </a>
+                    <a class="naver" type="submit">
+                        <img src="../img/naver-logo.png" alt="">
+                        <div>네이버 계정으로 로그인</div>
+                    </a>
+                    <a class="kakao" type="submit">
+                        <img src="../img/message-circle.png" alt="">
+                        <div>카카오톡 계정으로 로그인</div>
+                    </a>
+                </div>
+            </form>
+        </section>
+    </div>
+  </body>
+</html>

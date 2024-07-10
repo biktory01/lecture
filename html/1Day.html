@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--html Living Standard 라는 의미의 선언문-->
+<html lang="ko-KR">
+<!--주 언어 설정은 검색엔진, 스크린리더, 번역 기능 제공 등에 영향을 미치며 스크린리더가 음성 표현에 사용할 언어를 선택할 때 도움이 되며, ko이라고만 표기할 것이 아니라 ko-KR로 표기하는 것이 더 정확하다.-->
+<head>
+<!--문자 인코딩, 타이틀, 설명, 스타일시트, 스크립트 등 기계가 식별할 수 있는 문서 정보를 담았으며, 헤더 안에는 제목, 파비콘, 뷰포트 등이 포함된다.-->
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" 는 브라우저 호환성을 위해 작성해주는 것이며, IE의 최신 표준 모드를 보여주겠다는 의미-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--name은 화면 전체 페이지에 적용되는 "문서 레벨 메타데이터"를 제공하며, 예를 들어 viewport, description, author가 있습니다. content는 실제 메타데이터의 요소입니다.-->
+    <title>html 강의</title>
+    <!--제목은 약 60자를 넘지 않아야 합니다. 길어지게 될 경우 브라우저에서 노출되는 제목이 축소되어 보일 수 있습니다.-->
+    <link rel="stylesheet" href="style.css">
+    <!--현재 문서와 외부 리소스의 관계를 명시, head 요소 내부에만 위치할 수 있고, rel은 relation의 줄임말로 속성을 나타내고, href는 hyper-references 경로이며 연결 시 참조할 파일의 위치를 나타냄-->
+</head>
+<body>
+    <!--사용자에게 보이는 영역-->
+    안녕하세요!
+    <!--잘못된 부분이 있나 확인하고 싶을 때에는 w3c validation을 사용해 오류가 있는지 확인해볼 필요가 있다.-->
+    <p>
+        <strong>
+            다른 요소가 들어갈 수 있습니다.
+        </strong>
+    </p>
+    <!-- 주석처리는 개발 내용을 간단하게 적어놓는 것이 좋다. 나중에 내가 봤을때 알아볼 수 있게 -->
+
+    <!-- 이미지에 나와 있는대로 태그 순서를 늘어 놓아 보기 -->
+    <section>
+        <h1>
+            <strong></strong>
+        </h1>
+        <img src="" alt="">
+        <div>
+            <!-- 1. 커서를 놓고 Alt를 클릭한 상태에서 원하는 곳에 클릭을 순서대로 해준다. -->
+            <!-- 2. ctrl+D로 한번에 잡아서 해도 된다. -->
+            <!-- 3. 처음부터 emmet을 이용해 p*3>strong 으로 한꺼번에 생성한다. -->
+            <p><strong></strong></p>
+            <p><strong></strong></p>
+            <p><strong></strong></p>
+        </div>
+    </section>
+</body>
+</html>

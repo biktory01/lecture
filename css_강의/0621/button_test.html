@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* button의 기본 속성은 button, form 태그 안에 들어있을 때에는 submit이 된다 */
+        /* :enabled:hover를 고려하면 disabled에 대응하기 좋다. */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .btnWrap {
+            padding: 8px 24px 8px 12px;
+        }
+        button {
+            padding: 9px 25px;
+            color: #CBD5DF;
+            background-color: #343F50;
+            box-shadow: 2px 2px 0px 0px #FFFFFF1A inset;
+        }
+        .yes {
+            color: #439AFF;
+        }
+        .del {
+            color: #EB5757;
+        }
+        .yes:hover {
+            background-color: #439AFF;
+        }
+        .del:hover {
+            background-color: #EB5757;
+        }
+        .btnWrap.func button:hover,
+        .btnWrap.func button:active {
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-color: #fff;
+        }
+        .btnWrap.func button:hover {
+            box-shadow: 2px 2px 0px 0px #FFFFFF33 inset;
+        }
+        .btnWrap.func button:active {
+            box-shadow: 2px 2px 0px 0px #00000033 inset;
+        }
+        .disabled {
+            color: #4A5568;
+        }
+    </style>
+</head>
+<body>
+    <div class="btnWrap func">
+        <button type="button" class="btn">Button</button>
+        <button class="yes">Yes</button>
+        <button class="del">Del</button>
+    </div>
+    <div class="btnWrap">
+        <button class="disabled" disabled>Button</button>
+    </div>
+</body>
+</html>

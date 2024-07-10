@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 스코프
+        // 접근해서 사용할 수 있는 범위
+
+        // 전역 스코프: 어디서든 접근이 가능하다 - 함수 안에서도 블록{} 안에서도 참조될 수 있다.
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+        // 지역 스코프로 선언된 것들은 밖에서 접근이 불가능하다.
+        function func1() {
+            // 함수 스코프
+            var fA = 40;
+            let fB = 50;
+            const fC = 60;
+            console.log("function: ", a, b, c);
+            console.log("function: ", fA, fB, fC);
+        }
+        func1();
+
+        console.log("---out");
+        // console.log(fA);
+        // console.log(fB);
+        // console.log(fC);
+
+        {
+            // bA: 함수에 넣은게 아니라서 전역스코프 - 블록 밖에서도 참조가 가능하다.
+            // 중괄호 {}도 블록 영역으로 인식하기 때문에
+            var bA = 70;
+            let bB = 80;
+            {
+                const bC = 90;
+            }
+            console.log("block: ", a, b, c);
+            console.log("block: ", bA, bB, bC);
+        }
+        console.log("---out");
+        console.log(bA);
+        // console.log(bB);
+        // console.log(bC);
+    </script>
+</body>
+</html>

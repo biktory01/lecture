@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 30px;
+            background-color: orange;
+        }
+        div:last-child {
+            margin-bottom: 0;
+        }
+        .box1, .box3 {
+            padding: 20px;
+            border: 10px solid black;
+        }
+        .box1 {
+            box-sizing: border-box;
+        }
+        .box3 {
+            box-sizing: content-box;
+        }
+        .box4 {
+            width: 600px;
+            /* display: flex;
+            align-items: center; */
+            background-color: aqua;
+        }
+
+        p {
+            width: 400px;
+            margin: auto 0 auto auto;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <div class="box4">
+        <p>margin을 사용한 배치</p>
+    </div>
+</body>
+</html>

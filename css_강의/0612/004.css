@@ -1,0 +1,6 @@
+/* at-rule 문법 */
+@import url("004_font.css");
+
+h1 {
+    color: red;
+}

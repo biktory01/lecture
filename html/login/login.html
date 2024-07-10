@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Spoqa Han Sans Neo';
+    }
+    .lgnWrap {
+        width: 350px;
+        height: 140px;
+        padding: 30px 25px;
+    }
+    .lgnBox {
+        padding: 19px 16px 18px 16px;
+        border-radius: 5px;
+        border: 1px solid #dbdbdb;
+    }
+    .lgnBox p {
+        margin-bottom: 16px;
+        color: #000;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .lgnBox .lgnBtn {
+        width: 318px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #711BFF;
+        border-radius: 4px;
+        border: 0;
+    }
+    .lgnBtn img {
+        width: 64px;
+        height: 18px;
+    }
+    .lgnBtn span {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .idPwd {
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .idPwd .id,
+    .idPwd .signIn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .idPwd .id img,
+    .idPwd .signIn img {
+        width: 16px;
+        height: 16px;
+    }
+    .idPwd .id span,
+    .idPwd .signIn span {
+        color: #767676;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .idPwd .id .idBar {
+        position: relative;
+    }
+    .idPwd .id .idBar::before {
+        content: "";
+        width: 1px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #000;
+    }
+</style>
+<body>
+    <div class="lgnWrap">
+        <div class="lgnBox">
+            <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
+            <button class="lgnBtn">
+                <img src="img/weniv-logo.png" alt="위니브 로고">
+                <span>로그인</span>
+            </button>
+            <div class="idPwd">
+                <div class="id">
+                    <img src="img/icon-lock.png" alt="자물쇠 이미지">
+                    <a class="idBar">아이디</a>
+                    <a>비밀번호찾기</a>
+                </div>
+                <div class="signIn">
+                    <img src="img/icon-user.png" alt="사람 이미지">
+                    <a>회원가입</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 선생님이 피드백하고 짜주신 방향 -->
+    <!-- 로그인은 없어서는 안될 기능이기 때문에 section을 통해 코드를 짜는 것이 필요하다. -->
+    <!-- 로그인 페이지만 혼자 있는 것이 아니기 때문에 페이지에 이미 h1 태그(로고)가 있다고 생각하고 h1을 사용하지 않고, h2를 사용할 것 같다. -->
+    <section>
+        <h2>로그인</h2>
+        <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
+        <!-- 로그인 모달 open 버튼 -->
+        <button>
+            <img src="img/weniv-logo.png" alt="위니브 로고">
+            <span>로그인</span>
+        </button>
+        <!-- img에 alt는 굳이 입력할 필요가 없으므로 적지 않아도 된다. -->
+        <!-- |는 의미가 없는 부분이기 때문에 이렇게 넣기 보다는 추후 :before를 통해 css로 추가하는 방식으로 고치는 것이 좋다. -->
+        <div>
+            <img src="img/icon-lock.png" alt="">
+            <a href="#">아이디</a>
+            <a href="#">비밀번호찾기</a>
+            <img src="img/icon-user.png" alt="">
+            <a href="#">회원가입</a>
+        </div>
+    </section>
+</body>
+</html>

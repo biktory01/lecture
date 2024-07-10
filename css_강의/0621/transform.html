@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            /* 함수 안에 들어가는 값 : 인자, 인수 */
+            /* x축, y축 값을 나누어 작성할 수 있음, 숫자 2개를 적을 수 있음 */
+            transform: scale(2);
+            /* 원점, 기준점을 바꾸는 것 */
+            transform-origin: left top;
+            /* rotate : deg, turn 과 같은 형태로 사용하며, 기본적으로 시계 방향으로 조절되며, 역방향을 원하는 경우 - 값을 주면 된다. */
+            /* transform: rotate(45deg); */
+            /* translate : 위치를 이동시키는 태그 */
+            /* percent로 사용하게 되면 자기 자신을 기준으로 사용하게 된다. */
+            transform: translate(50%, 50%);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

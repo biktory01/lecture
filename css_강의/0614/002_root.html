@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :root {
+            --main-font: 10px;
+        }
+
+        * {
+            font-size: var(--main-font)
+        } */
+
+        :root {
+            --main-color: rgb(160, 182, 220);
+            --point1-color: red;
+            --point2-color: yellow;
+            --main-font-size: 32px;
+            --btn-padding: 4px 40px;
+        }
+
+        /* padding: 0 0 0 0 - 상 우 좌 하 */
+        /* padding: 0 0 0 - 상 좌우 하 */
+        /* padding: 0 0 - 상하 좌우 */
+        /* padding: 0 - 상하좌우 */
+
+        /* 내가 작성한 코드 */
+        /* p, button {
+            color: rgb(160, 182, 220)
+        }
+        button {
+            font-size: 32px;
+            padding: 4px 40px;
+            background-color: #fff;
+            border: 1px solid rgb(160, 182, 220);
+        }
+        .color1 button {
+            background-color: red;
+        }
+        .color2 button {
+            background-color: yellow;
+        } */
+
+        body {
+            color: var(--main-color);
+        }
+
+        button {
+            padding: var(--btn-padding);
+            color: var(--main-color);
+            font-size: var(--main-font-size);
+            background-color: #fff;
+            border: 1px solid var(--main-color);
+        }
+        .color1 button {
+            background-color: var(--point1-color);
+        }
+        .color2 button {
+            background-color: var(--point2-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>text</p> -->
+
+    <p>안녕하세요</p>
+    <button>버튼</button>
+    <div class="color1">
+        <p>안녕하세요</p>
+        <button>버튼</button>
+    </div>
+    <div class="color2">
+        <p>안녕하세요</p>
+        <button>버튼</button>
+    </div>
+</body>
+</html>

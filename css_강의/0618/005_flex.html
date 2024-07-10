@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            /* 기본값 */
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            /* 주축의 방향을 세로로 */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+
+            /* 주축을 기준으로 정렬하는 속성 */
+            /* justify-content: center; */
+            /* justify-content: left; */
+            /* justify-content: right; */
+            /* justify-content: flex-start; */
+            /* 양옆의 여백이 동일하게 여백을 나눠가짐 */
+            /* justify-content: space-around; */
+            /* 양 끝의 여백이 아예 없고 나머지 여백을 나눠가짐 */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            background-color: #ddd;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+    </div>
+</body>
+</html>

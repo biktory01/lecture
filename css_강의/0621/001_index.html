@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 어떤 요소에 포커스를 줬을 때 부모 요소에 주고 싶을 때 */
+        /*focus시 요소의 부모에 스타일 지정*/
+        /* div:focus-within {
+            background:skyblue;
+        } */
+        input:enabled {
+            background-color: skyblue;
+        }
+
+        /* 툴팁, 특정 태그에 대한 설명 */
+        [title] {
+            text-decoration: underline;
+        }
+        [title|=wrap] {
+            text-decoration: underline;
+        }
+        /* ^ = 캐럿 */
+    </style>
+</head>
+<body>
+    <section class="wrap-soccor-red">
+        축구블라블라
+    </section>
+    <a href="http://www.naver.com" title="다음으로 이동합니다">낚시</a>
+    <p title="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus pariatur, molestias consectetur ipsum inventore vel ipsa, odio ex voluptatum nulla sunt blanditiis cumque nihil aspernatur quasi eveniet nisi dolorem vero!</p>
+    <div>
+        <input type="text" disabled>
+    </div>
+</body>
+</html>

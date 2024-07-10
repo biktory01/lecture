@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수는 포스트잇
+        // window.prompt("이름을 입력해주세요");
+        // console.log("이한수님 안녕하세요");
+
+        // 변수 선언
+        // 변수 키워드 - var, let, const
+        // 선언
+        var a;
+        // 선언 + 할당 = 초기화(값)
+        let b = 10;
+
+        // const는 선언과 동시에 할당을 해주어야 한다. 재할당이 불가능하다. (안그러면 오류가 발생됨)
+        // const는 메모리에서 뜯어낼 수 없다. (주소불변)
+        // 이미 저장되어 있을때는 값이 변화될 수 없다.
+        const name = "weniv";
+
+        // 변수 할당(재할당)
+        // 변수 = 값;
+        a = 30;
+        b = 20;
+        // const로 선언한 변수는 재할당이 불가합니다.
+        // name = "hello"; // TypeError : Assignment to constant variable.
+
+        // 변수 참조
+        console.log(a);
+        console.log(b);
+        console.log(name);
+        // 참조할 변수가 선언이 안되어있다 - Uncaught ReferenceError : c is not defined
+        console.log(c);
+    </script>
+</body>
+</html>

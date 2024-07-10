@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move-licat{
+            to{
+                background-position: right 0;
+            }
+        }
+        @keyframes move {
+            to {
+                transform: translateX(300px);
+            }
+        }
+        .licat {
+            width: 168px;
+            height: 200px;
+            background: url(https://cdn.discordapp.com/attachments/1227839289120002101/1253596164540862518/keyframes-licat.png?ex=66766de8&is=66751c68&hm=9537c5dc8930c5b8a72825324144a994ab55ba27c52f086bb793cdd81ac43333&) no-repeat 0 0 / auto 100%;
+            animation: move-licat 1s infinite steps(6);
+        }
+        div {
+            width: 168px;
+            height: 200px;
+            background-color: red;
+            animation: move 0.5s infinite alternate-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

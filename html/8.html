@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 접근성 높이기</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+    }
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+    caption {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        font-weight: bold;
+        caption-side: top;
+    }
+  </style>
+<body>
+    <table>
+        <caption>
+          구매 내역
+        </caption>
+        <thead>
+            <!-- id-headers는 자주 사용하지 않고, 보통 scope로 사용한다. -->
+          <tr>
+            <th id="purchase">구매 항목</th>
+            <th id="location">장소</th>
+            <th id="date">날짜</th>
+            <th id="color">색상</th>
+            <th id="cost">비용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="mac">맥북</th>
+            <td headers="location mac">가로수길 애플스토어</td>
+            <td headers="date mac">12/09</td>
+            <td headers="color mac">실버</td>
+            <td headers="cost mac">1,900,000</td>
+          </tr>
+          <tr>
+            <th id="monitor">모니터</th>
+            <td headers="location monitor">여의도 LG전자 베스트스토어</td>
+            <td headers="date monitor">06/05</td>
+            <td headers="color monitor">화이트</td>
+            <td headers="cost monitor">365,000</td>
+          </tr>
+          <tr>
+            <th id="chicken">치킨</th>
+            <td headers="location chicken">강남 KFC</td>
+            <td headers="date chicken">06/13</td>
+            <td headers="color chicken">핫크리스피</td>
+            <td headers="cost chicken">25,000</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>

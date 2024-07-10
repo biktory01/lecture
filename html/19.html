@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+<style>
+    .flex {
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <!-- <select name="" id="" size="2" required>
+        <optgroup label="직업 선택하기">
+            <option value="designer">옵션 선택하기</option>
+            <option value="FE" selected>프론트엔드 개발자</option>
+            <option value="BE">백엔드 개발자</option>
+        </optgroup>
+
+        <optgroup label="어쩌구 선택하기">
+            <option value="designer">옵션 선택하기</option>
+            <option value="FE" selected>프론트엔드 개발자</option>
+            <option value="BE">백엔드 개발자</option>
+        </optgroup>
+    </select> -->
+
+    <div class="flex">
+        <div>
+            <h3>기본형태</h3>
+            <select name="" id="">
+                <option value="designer">옵션 선택하기</option>
+                <option value="FE" selected>프론트엔드 개발자</option>
+                <option value="BE">백엔드 개발자</option>
+            </select>
+        </div>
+        
+        <div>
+            <h3>multiple required</h3>
+            <select name="" id="" size="3" multiple required>
+                <option value="designer">옵션 선택하기</option>
+                <option value="FE" selected>프론트엔드 개발자</option>
+                <option value="BE">백엔드 개발자</option>
+            </select>
+        </div>
+        
+        <div>
+            <h3>multiple disabled</h3>
+            <select name="" id="" size="3" multiple disabled>
+                <option value="designer">옵션 선택하기</option>
+                <option value="FE" selected>프론트엔드 개발자</option>
+                <option value="BE">백엔드 개발자</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>

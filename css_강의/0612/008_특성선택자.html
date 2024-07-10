@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    [type="button"] {
+        border: 0;
+        cursor: pointer;
+    }
+
+    /* ^는 ~~로 시작한다는 의미입니다. */
+    [class^="btn"] {
+        color: blanchedalmond;
+        background-color: aqua;
+    }
+
+    /* $는 ~~로 끝난다는 의미입니다. */
+    [class$="btn"] {
+        color: aquamarine;
+        background-color: red;
+    }
+
+    /* *은 ~~이 포함된 모든 클래스 */
+    [class*="btn"] {
+        border: 3px dotted green;
+    }
+
+    /* 클래시에 btn이 포함되지 않은 모든 요소 선택 */
+    /* input:not([class*="btn"]) {
+        color: blue;
+    } */
+
+    /* href속성을 가신 a태그에만 효과가 주어진다. */
+    a[href] {
+        color: red;
+    }
+</style>
+<body>
+    <input type="text" value="버튼">
+    <input type="button" value="버튼">
+    <input type="text" class="btn-first" value="버튼">
+    <input type="text" class="second-btn" value="버튼">
+    <a href="naver.com">네이버로 이동</a>
+    <a>이동하지 않음</a>
+</body>
+</html>

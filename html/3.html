@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록레벨요소 및 인라인레벨요소</title>
+</head>
+<body>
+    <!-- 블록 -->
+    <div style="background-color: antiquewhite">전 div입니다</div>
+    <p style="background-color: green;">p태그 입니다.</p>
+    <ul style="background-color: aqua;">
+        <li style="background-color: violet;">li태그 입니다.</li>
+        <li style="background-color: rgb(130, 186, 238);">li태그 입니다.</li>
+    </ul>
+
+    <!-- 인라인 -->
+    <a href="#">a태그입니다.</a>
+    <span>나는 span</span>
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+
+    <!-- 인라인 블록 -->
+    <br>
+    <button>button</button>
+    <button>button</button>
+    <button>button</button>
+    <button>button</button>
+    <button>button</button>
+    <button>button</button>
+
+    <!-- 인라인요소 중에 a 태그의 경우, 안에 블록 요소 중첩 가능합니다! -->
+    <a href=”#”><div></div></a>
+
+    <!-- O -->
+    <div>
+        블록요소 안
+        <span>인라인요소 중첩 가능</span>
+    </div>
+
+    <!-- X : 레벨의 차이라고 생각하면 됩니다 - 힘이 센 친구인 div를 상대적으로 힘이 약한 span친구가 이길 수 없다고 생각하면 이해하기 쉬움 -->
+    <span>
+        인라인요소 안
+        <div>블록요소 중첩 불가능</div>
+    </span>
+
+    <!-- division의 줄임말, 콘텐츠의 분할 요소 -->
+    <div style="background-color: antiquewhite">전 div입니다</div>
+    <div style="background-color: aquamarine">전 div2입니다</div>
+    <p>
+        이건
+        <span style="background-color: red">span</span> 태그입니다.
+    </p>
+    <p>
+        이런식으로
+        <span style="font-weight: bold">사용</span> 합니다.
+    </p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100px;
+            padding: 10px 15px;
+            color: #fff;
+            font-weight: 700;
+            /* box-sizing: border-box; */
+        }
+        button::after {
+            content: "🖐"
+        }
+        button:first-of-type {
+            background-color: #343F50;
+            border-top: 5px solid #4A5568;
+            border-left: 5px solid #4A5568;
+            box-shadow: 0px 0px 0px 2px #000;
+        }
+        button:nth-child(2) {
+            border-radius: 20px;
+            background: linear-gradient(90deg, rgba(195,66,255,1) 0%, rgba(49,94,255,1) 100%);
+            border: 2px dashed #e3e3e3;
+            /* 이거 덕에 선이 안쪽에 잡아먹히지 않고, 바깥으로 빠졌구나 */
+            background-clip: padding-box;
+        }
+        button:last-of-type {
+            color: #333;
+            background-color: #fff;
+            border-radius: 0 20px 20px;
+            border: 2px solid #eaeaea;
+            box-shadow: rgba(0, 0, 0, 0.1) 9px 8px 8px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
+    </style>
+</head>
+<body>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            width: 100%; margin-bottom: 60px;
+            max-width: 800px;
+            height: 400px;
+            text-align: center;
+        }
+        .flex-container,
+        .wrap1,
+        .wrap2,
+        .wrap2-item1,
+        .wrap2-item2 {
+            display: flex;
+            gap: 10px;
+        }
+        .wrap1-item1 {
+            width: 100%;
+            background-color: royalblue;
+        }
+        .wrap1-item2,
+        .wrap1-item3 {
+            width: calc(50% - 5px);
+        }
+
+        .wrap1-item2 {
+            background-color: rosybrown;
+        }
+        .wrap1-item3 {
+            background-color: teal;
+        }
+        .wrap1 {
+            flex: 2;
+            flex-wrap: wrap;
+        }
+        .wrap2,
+        .wrap2-item1,
+        .wrap2-item2,
+        .wrap2 > div > div {
+            flex: 1;
+        }
+        .wrap2 {
+            flex-direction: column;
+        }
+
+        .wrap2-item1 {
+            flex-direction: column;
+        }
+
+        .wrap2-item1 div:first-child {
+            background-color: blueviolet;
+        }
+        
+        .wrap2-item1 div:last-child {
+            background-color: purple;
+        }
+
+        .wrap2-item2 {
+        }
+        .wrap2-item2 div:first-child {
+            background-color: sandybrown;
+        }
+        .wrap2-item2 div:last-child {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="wrap1">
+            <div class="wrap1-item1"></div>
+            <div class="wrap1-item2">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="wrap2">
+            <div class="wrap2-item1">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="wrap2-item2">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

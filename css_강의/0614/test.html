@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        button {
+            padding: 10px;
+            border: 0;
+        }
+        button:first-child {
+            border: 10px solid #000;
+        }
+        
+        button:nth-child(2n) {
+            color: #fff;
+        }
+        button:first-child {
+            background-color: red;
+            border: 10px solid #000;
+        }
+        button:nth-child(2) {
+            background-color: coral;
+        }
+        button:nth-child(3) {
+            background-color: yellow;
+        }
+        button:nth-child(4) {
+            background-color: green;
+        }
+        button:nth-child(5) {
+            background-color: #4269E1;
+        }
+        button:nth-child(6) {
+            background-color: #0100FF;
+        }
+        button:nth-child(6) + button {
+            background-color: #8B2AE2;
+            border: 10px solid #000;
+        }
+        li {
+            color: #000;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        li>span {
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        li:not(:first-child)::before {
+            content: "💙";
+        }
+        li:first-child::before {
+            content: "🦊";
+        }
+        li::after {
+            content: "강사님";
+            color: gray;
+            font-size: 10px;
+        }
+        li:last-child:after {
+            content: "멘토님";
+        }
+    </style>
+</head>
+<body>
+    <button>빨강</button>
+    <button>주황</button>
+    <button>노랑</button>
+    <button>초록</button>
+    <button>파랑</button>
+    <button>남색</button>
+    <button>보라</button>
+
+    <ul>
+        <li>지지</li>
+        <li>로지</li>
+        <li>웨이드</li>
+        <li>하티</li>
+        <li>라이캣</li>
+        <li>개리</li>
+        <li>빙키</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emmet 실습</title>
+    <link rel="stylesheet" href="style.css"><!--link:css 를 입력 시 css파일과 연결됨-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><!--link:favicon 를 입력 시 파비콘 등록 링크가 생성됨-->
+</head>
+<body>
+    <!-- h1을 입력 후 tab 시 아래와 같이 출력됨 -->
+    <h1></h1>
+
+    <!-- h1+h2+p 입력 시 형제 레벨의 h1, h2, p가 출력됨 -->
+    <h1></h1>
+    <h2></h2>
+    <p></p>
+
+    <!-- h1*3 입력 시 h1이 3개가 출력됨  -->
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <!-- h1{hello world}*10 입력 시 h1의 컨텐츠 내용인 hello world가 10개 출력됨 -->
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+
+    <!-- a{Click} 입력 시 a태그에 click이라는 컨텐츠를 생성해줌 -->
+    <a href="">click</a>
+
+    <!-- h1#hojun 입력 시 h1태그에 hojun이라는 id값을 출력함 -->
+    <h1 id="hojun"></h1>
+
+    <!-- h1.hojun 입력 시 h1태그에 hojun이라는 class값을 출력함 -->
+    <h1 class="hojun"></h1>
+
+    <!-- (div>table>(tr>(td*2))*3)+(footer>p) 입력 시 출력이 되지 않는 오류가 있으므로, 뒷부분의 footer>p 부분의 괄호를 제거해주면 올바르게 출력된다. -->
+    <!-- (div>table>(tr>(td*2))*3)+footer>p 입력 시 올바르게 출력됨 -->
+    <!-- 여기서 현재 레벨이 같은 것은 div, footer -->
+    <!-- div의 자식 태그인 table에 tr 3개가 생성되고 각 tr안에 td가 각각 2개씩 생성됨 -->
+    <!-- footer에 자식 태그인 p가 생성됨 -->
+    <div>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <p></p>
+    </footer>
+
+    <!-- div#one.c1.c2.c3 입력 시 div태그에 one이라는 id를 가진 클래스 c1, c2, c3가 출력됨 -->
+    <div id="one" class="c1 c2 c3"></div>
+
+    <!-- ul>li.item$*5 입력 시 ul태그의 자식 태그인 li 클래스가 출력되며, 클래스 값이 앞쪽의 item은 중복되므로 같게 출력되는 반면 $라고 입력된 부분때문에 오름차순으로 숫자가 나열된다. -->
+    <ul>
+        <li class="item1"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+    </ul>
+
+    <!-- lorem 입력 시 lorem ipsum 이라는 자동생성 텍스트가 생성됨 -->
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos minus blanditiis facilis veniam aliquam aspernatur ab velit debitis quia eligendi. Aspernatur ipsa hic quas officia animi libero quia in quasi.
+
+    <!-- lorem*5 입력 시 lorem 자동생성 텍스트를 5개 출력해줌 -->
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolorum obcaecati? Ea, voluptatem. Et nemo, ipsam id quibusdam mollitia quia! Impedit asperiores vero inventore repudiandae quas similique non itaque. Architecto?
+    Molestiae dolores, debitis ea voluptate culpa eum necessitatibus animi optio modi nisi ipsam voluptatibus quos accusamus reprehenderit sapiente quis rem, deleniti sunt autem, facilis aut hic officiis at? Sit, amet.
+    Nisi voluptatem assumenda itaque consectetur, suscipit, numquam optio repellat similique non quidem voluptates inventore dignissimos, blanditiis vero deleniti fugit minima. Reiciendis voluptatem numquam accusamus sed similique minus placeat voluptatibus assumenda?
+    Voluptatem, quisquam. Ad velit autem, ullam maxime distinctio eveniet? Quisquam fugiat vel porro modi nobis culpa obcaecati ipsam placeat nam voluptatibus? Eveniet, similique? Ex, pariatur. Commodi, earum. Earum, ea qui.
+    Recusandae, temporibus soluta illum animi distinctio culpa quis, possimus eveniet dicta nemo error nihil iure quam ratione cumque? Hic, labore quo. Eveniet omnis qui nesciunt quod molestias iure praesentium sit.
+
+    <!-- lorem5 입력 시 자동생성 텍스트의 단어 5개를 출력해줌 -->
+    Lorem ipsum dolor sit amet.
+
+    <!-- [a='value1' b="value2" c=1] 입력 시 div 태그의 a = "value1", b = "value2", c="1" 값을 넣어주는 것을 출력함 -->
+    <div a="value1" b="value2" c="1"></div>
+
+    <!-- a[href='www.naver.com'] 입력 시 a 태그에 www.naver.com 링크를 넣어 출력함 -->
+    <a href="www.naver.com"></a>
+
+    <!--{} 안의 텍스트 : 콘텐츠,
+        + 는 같은 레벨의 태그 나열 시,
+        # 은 id를 설정해 줄 때,
+        . 은 class를 지정해 줄 때,
+        () 는 여러개의 태그를 레벨별로 나누어 묶을 때 사용
+    -->
+
+    <!--
+            Ctrl + \ : 토글 보이기
+            Ctrl + O : 파일 열기
+            Ctrl + P : 프로젝트 검색
+            Ctrl + F : 열려 있는 파일 내에서 검색
+            Ctrl + Shift + F : 열려 있는 전체 프로젝트 내에서 검색
+            Ctrl + , : Settings
+            Ctrl + N : 새로운 파일
+            Ctrl + S : 파일 저장
+            Ctrl + Shift + S  :다른 이름으로 저장
+        -->
+        <!-- 참고자료 : https://docs.emmet.io/cheat-sheet/ -->
+</body>
+</html>

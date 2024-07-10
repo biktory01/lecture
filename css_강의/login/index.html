@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        section {
+            width: 350px;
+            padding: 19px 16px 18px 16px;
+            border-radius: 5px;
+            border: 1px solid #dbdbdb;
+        }
+        section h2 {
+            font-size: 0;
+        }
+        section p {
+            margin-bottom: 16px;
+            color: #000;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        section .btn {
+            width: 100%;
+            margin: 0 auto;
+            padding: 11px 108px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #711BFF;
+            border-radius: 4px;
+            border: 0;
+        }
+        section .logo {
+            width: 64px;
+            height: 18px;
+        }
+        section .btn span {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .bottom {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .bottom img {
+            width: 16px;
+            height: 16px;
+        }
+        .bottom a {
+            margin-left: 4px;
+            color: #767676;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+        .bottom .id::after {
+            content: "|";
+            margin: 0 5px;
+        }
+        .bottom > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ex {
+            width: 400px;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .ex img {
+            width: 16px;
+            height: 16px;
+        }
+        .ex a {
+            margin-left: 4px;
+            color: #767676;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .ex a:nth-of-type(2) {
+            margin-left: 0;
+        }
+        .ex .id::after {
+            content: "";
+            margin: 0 5px;
+            width: 1px;
+            height: 12px;
+            background-color: #767676;
+            display: inline-block;
+        }
+        .ex > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>로그인</h2>
+        <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
+        <!-- 로그인 모달 open 버튼 -->
+        <button class="btn">
+            <img class="logo" src="img/weniv-logo.png" alt="위니브 로고">
+            <span>로그인</span>
+        </button>
+        <!-- img에 alt는 굳이 입력할 필요가 없으므로 적지 않아도 된다. -->
+        <!-- |는 의미가 없는 부분이기 때문에 이렇게 넣기 보다는 추후 :before를 통해 css로 추가하는 방식으로 고치는 것이 좋다. -->
+        <div class="bottom">
+            <div>
+                <img src="img/icon-lock.png" alt="">
+                <a class="id" href="#">아이디</a>
+                <a href="#">비밀번호찾기</a>
+            </div>
+            <div>
+                <img src="img/icon-user.png" alt="">
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="ex">
+        <div>
+            <img src="img/icon-lock.png" alt="">
+            <a class="id" href="#">아이디</a>
+            <a href="#">비밀번호찾기</a>
+        </div>
+        <div>
+            <img src="img/icon-user.png" alt="">
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+</body>
+</html>

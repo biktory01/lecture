@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid salmon;
+        }
+        img {
+            float: right;
+        }
+        /* float에 값을 똑같이 줘도 float가 해제되지만, 항상 확인할 수 없기 때문에 both를 준다. */
+        .clear {
+            clear: both;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .box1 {
+            background-color: blue;
+            float: left;
+        }
+
+        .box2 {
+            background-color: blueviolet;
+            float: left;
+        }
+
+        .box3 {
+            background-color: burlywood;
+            float: left;
+        }
+
+        .container {
+            background-color: aqua;
+
+            /* 방법1 */
+            /* height: 100px; */
+
+            /* 방법2 */
+            /* overflow: hidden; */
+        }
+
+        /* 방법3 */
+        .clear-fix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <img src="http://placehold.it/200x150" alt="">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellat nemo sed totam? Voluptates, rerum! Neque ad minima culpa, hic placeat eos, perspiciatis unde nostrum id ut explicabo non omnis?
+    </p>
+    <p class="clear">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellat nemo sed totam? Voluptates, rerum! Neque ad minima culpa, hic placeat eos, perspiciatis unde nostrum id ut explicabo non omnis?
+    </p>
+    <div class="container clear-fix">
+        container
+        <div class="box box1">A</div>
+        <div class="box box2">B</div>
+        <div class="box box3">C</div>
+    </div>
+</body>
+</html>
