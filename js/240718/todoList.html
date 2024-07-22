@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>나의 todo list</h1>
+    <p>1. 오늘 저녁에는 스크램블 에그를 먹겠다.<button type="button">삭제</button></p>
+    <p>2. 후식으로 요구르트를 먹겠다.<button type="button">삭제</button></p>
+    <p>3. 자기 전에 반드시 내일 점심 메뉴를 생각해두겠다.<button type="button">삭제</button></p>
+
+    <script>
+
+        // document.addEventListener('click', function(event) {
+        //     if(event.target.nodeName === 'p') {
+        //         const pTxt = event.target.textContent.slice(0, -2);
+        //         alert(pTxt);
+        //     } else if(event.target.nodeName === 'BUTTON') {
+        //         const Del = confirm("삭제할까요?");
+        //         Del && event.target.parentElement.remove();
+        //     }
+        // });
+
+        document.addEventListener('click', function(event) {
+            if (event.target.nodeName === 'P') {
+                handleParagraphClick(event);
+            } else if (event.target.nodeName === 'BUTTON') {
+                handleButtonClick(event);
+            }
+        });
+
+        function handleParagraphClick(event) {
+            const pTxt = event.target.textContent.slice(0, -2);
+            alert(pTxt);
+        }
+
+        function handleButtonClick(event) {
+            const del = confirm("삭제할까요?");
+            if (del) {
+                event.target.parentElement.remove();
+            }
+        }
+        
+    </script>
+</body>
+</html>

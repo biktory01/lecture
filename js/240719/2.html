@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Robot(name, foods){
+            this.name = name;
+            this.foods = foods;
+
+            this.sayYourName = function(){
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+
+            this.randomMenu = function() {
+                const randomIdx = Math.floor(Math.random() * this.foods.length);
+                console.log(`오늘의 메뉴는 ${this.foods[randomIdx]}입니다.`);
+            }
+        }
+
+        const foods = ["떡볶이", "순대", "튀김", "콜라", "어묵"];
+        const robot = new Robot("브랜든", foods);
+
+        robot.sayYourName();
+        robot.randomMenu();
+    </script>
+</body>
+</html>

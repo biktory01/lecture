@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const me = {
+            name : '이한수',
+            canEat : function(){
+                console.log('나는 아침을 먹는다');
+            },
+            empty : function(stomach){
+                stomach.dayOne();
+            }
+        }
+
+        const normal = {
+            day: 1,
+            dayOne : function(){
+                this.day++;
+            }
+        }
+
+        me.canEat(normal);
+        me.empty(normal);
+        console.log(normal);
+    </script>
+</body>
+</html>
