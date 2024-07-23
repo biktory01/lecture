@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // requestObj가 onreadystatechange보다 뒤에 실행되어야 하는 이유
+        // 결과가 감지되기 이전에 감지되는 조건이 만료될 수 있기 때문에
+        // 조건을 먼저 명시하고 결과가 발생되는 순서를 조절해줘야 한다.
+
+        // 요청을 위한 XHR객체 생성
+        const requestObj = new XMLHttpRequest();
+        console.log(requestObj.readyState);// 0 
+
+        // 요청을 준비(요청을 open) open메서드의 첫번째 요소에는 http method, 두번째에는 요청을 보낼 URL
+        requestObj.open('GET', 'https://test.api.weniv.co.kr/mall');// 1
+        console.log(requestObj.readyState);// 1
+        // 요청 보낼때, 요청 상태가 바뀔때 마다 실행될 콜백함수 설정.
+        requestObj.onreadystatechange = () => {
+            console.log(requestObj.readyState);// 2, 3, 4
+            
+            // readystate : 요청을 보내는 클라이언트의 상태를 의미합니다.
+            // readystate의 종류
+            // 0 (UNSENT) - XHR 객체가 생성되었지만 아직 초기화되지 않았습니다.
+            // 1 (OPENED) - open()함수가 호출되어 요청이 초기화되었습니다.
+            // 2 (HEADERS_RECEIVED) - send()함수가 호출되었습니다.
+            // 3 (LOADING) - 데이터를 다운받는 중 입니다.
+            // 4 (DONE) - 통신이 완료되었습니다.
+            if (requestObj.readyState === 4 && requestObj.status === 200) {
+                const result = requestObj.responseText;
+                console.log(JSON.parse(result)[0]);
+            }
+        };
+        requestObj.send();
+    </script>
+</body>
+</html>

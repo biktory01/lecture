@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let result;
+        // function xhrRequest() {
+
+        //     const requestObj = new XMLHttpRequest();
+        //     requestObj.open('GET', 'orderCoffee.txt');
+        //     requestObj.onreadystatechange = () => {
+        //         if (requestObj.readyState === 4 && requestObj.status === 200) {
+
+        //             result = requestObj.responseText;
+        //             document.write(result);
+        //         }
+        //     };
+        //     requestObj.send();
+        // }
+
+        // xhrRequest();
+
+        // let result;
+        // function xhrRequest() {
+
+        //     const requestObj = new XMLHttpRequest();
+        //     requestObj.open('GET', 'orderCoffee.txt');
+        //     requestObj.onreadystatechange = () => {
+        //         if (requestObj.readyState === 4 && requestObj.status === 200) {
+
+        //             result = requestObj.responseText;
+        //             console.log(result);
+        //         }
+        //     };
+        //     requestObj.send();
+        // }
+
+        // xhrRequest();
+
+        const promise = new Promise((resolve, reject) => {
+            const requestObj = new XMLHttpRequest();
+            requestObj.open('GET', 'orderCoffee.txt');
+            requestObj.onreadystatechange = () => {
+                if (requestObj.readyState === 4 && requestObj.status === 200) {
+
+                    result = requestObj.responseText;
+                    resolve(result);
+                } else {
+                    reject(new Error(`커피주문이 정상적으로 이뤄지지 않았습니다.: ${requestObj.status}`));
+                }
+            };
+            requestObj.send();
+        });
+        
+    </script>
+</body>
+</html>
